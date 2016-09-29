@@ -9,10 +9,10 @@ public class GenPolinRand {
 		FileWriter fw = null;
 		PrintWriter pw = null;
 		try {
-			fw = new FileWriter("./Preparacion de Prueba/Lote de Prueba/Entrada/pruebaTiempo1.in");
+			fw = new FileWriter("./Preparacion de Prueba/Lote de Prueba/Entrada/pruebaTiempo8.in");
 			pw = new PrintWriter(fw);
 			Random rand = new Random();
-			for (int i = 1000; i >= 0; i--) {
+			for (int i = 3500; i >= 0; i--) {
 				pw.println(i + " " + rand.nextInt((100 - 0) + 1));
 			}
 		} catch (Exception e) {

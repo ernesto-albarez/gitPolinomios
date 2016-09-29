@@ -36,7 +36,7 @@ public class Polinomio {
 		}
 	}
 
-	public double evaluarMSucesivas(double x) { // O(n^3)
+	public double evaluarMSucesivas(double x) { // O(no)
 		double acum = 0;
 		for (int i = 0; i < this.coeficientes.length; i++) {
 			if (this.coeficientes.length != 0) {
@@ -50,7 +50,7 @@ public class Polinomio {
 		return acum;
 	}
 
-	public double evaluarRecursiva(double x) { // O(^2)
+	public double evaluarRecursiva(double x) { // O(no)
 		double acum = 0;
 		for (int i = 0; i < coeficientes.length; i++) {
 			acum += (this.coeficientes[i] * this.potencia(x, i));
@@ -70,7 +70,7 @@ public class Polinomio {
 		return res;
 	}
 
-	public double evaluarRecursivaPar(double x) { // O(n^2)
+	public double evaluarRecursivaPar(double x) { // O(no)
 		double acum = 0;
 		for (int i = 0; i < coeficientes.length; i++)
 			acum += (this.coeficientes[i] * this.potenciaPar(x, i));
@@ -140,27 +140,26 @@ public class Polinomio {
 		System.out.println("evaluarPow: " + pol1.evaluarPow(1000) + "\n");
 		
 		for (int i = 0; i < pol1.coeficientes.length; i++) {
-			System.out.println("grado: " + i + " --Coeficiente: " + pol1.coeficientes[i]);
+			System.out.println("grado:" + i + " --Coeficiente:" + pol1.coeficientes[i]);
 		}
+		System.out.println("\npotencia: " + pol1.potencia(1000, 0) + "\n");
 		
-		System.out.println("\npotencia--" + pol1.potencia(1000, 0));
 		System.out.println("evaluarRecursiva: " + pol1.evaluarRecursiva(1000));
 		System.out.println("evaluarRecursivaPar: " + pol1.evaluarRecursivaPar(1000));
 		
 		Calendar tIni = new GregorianCalendar();
 		System.out.println("evaluarProgDinamica: " + pol1.evaluarProgDinamica(1000));
-		
 		Calendar tFin = new GregorianCalendar();
-		System.out.println("\nTiempo de ejecucion de PorgDinamica: " + (tFin.getTimeInMillis() - tIni.getTimeInMillis()));
 		
+		System.out.println("\nPorgDinamica:" + (tFin.getTimeInMillis() - tIni.getTimeInMillis()) + "\n");
 		System.out.println("evaluarHorner: " + pol1.evaluarHorner(1000));
-		tIni = new GregorianCalendar();
 		
+		tIni = new GregorianCalendar();
 		System.out.println("evaluarMejorada: " + pol1.evaluarMejorada(1000));
 		tFin = new GregorianCalendar();
 		
 		System.out
-				.println("Tiempo de ejecucion de evaluarMejorada: " + (tFin.getTimeInMillis() - tIni.getTimeInMillis()));
+				.println("Tiempo de ejecucion de evaluarMejorada:" + (tFin.getTimeInMillis() - tIni.getTimeInMillis()));
 	}
 
 }
