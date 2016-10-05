@@ -297,7 +297,7 @@ public class PolinomioTest {
 			}
 		}
 	}
-
+/*
 	@Test
 	public void casoPolinomioIncompletoConevaluarMejorada() {
 		Polinomio pol1 = new Polinomio("./Preparacion de Prueba/Lote de Prueba/Entrada/Caso0.0.PolinomioIncompleto.in");
@@ -326,7 +326,7 @@ public class PolinomioTest {
 			}
 		}
 	}
-
+*/
 	@Test
 	public void casoPolinomioIncompletoConevaluarPow() {
 		Polinomio pol1 = new Polinomio("./Preparacion de Prueba/Lote de Prueba/Entrada/Caso0.0.PolinomioIncompleto.in");
@@ -651,7 +651,7 @@ public class PolinomioTest {
 			}
 		}
 	}
-
+/*
 	@Test
 	public void casoPolinomioEvaluado0ConevaluarRecursivaPar() {
 		Polinomio pol1 = new Polinomio("./Preparacion de Prueba/Lote de Prueba/Entrada/Caso0.2.PolinomioEvaluado0.in");
@@ -680,7 +680,7 @@ public class PolinomioTest {
 			}
 		}
 	}
-
+*/
 	@Test
 	public void casoPolinomioEvaluado0ConevaluarProgDinamica() {
 		Polinomio pol1 = new Polinomio("./Preparacion de Prueba/Lote de Prueba/Entrada/Caso0.2.PolinomioEvaluado0.in");
@@ -709,7 +709,7 @@ public class PolinomioTest {
 			}
 		}
 	}
-
+/*
 	@Test
 	public void casoPolinomioEvaluado0ConevaluarMejorada() {
 		Polinomio pol1 = new Polinomio("./Preparacion de Prueba/Lote de Prueba/Entrada/Caso0.2.PolinomioEvaluado0.in");
@@ -738,7 +738,7 @@ public class PolinomioTest {
 			}
 		}
 	}
-
+*/
 	@Test
 	public void casoPolinomioEvaluado0ConevaluarPow() {
 		Polinomio pol1 = new Polinomio("./Preparacion de Prueba/Lote de Prueba/Entrada/Caso0.2.PolinomioEvaluado0.in");
@@ -795,17 +795,5 @@ public class PolinomioTest {
 				e2.printStackTrace();
 			}
 		}
-	}
-
-	@Test
-	public void medirTiempo() {
-		for (int i = 1; i <= 8; i++) {
-			// Polinomio pol1 = new Polinomio("./Preparacion de Prueba/Lote de
-			// Prueba/Entrada/pruebaTiempo" + i + ".in");
-			Calendar tIni = new GregorianCalendar();
-			// double resActual = pol1.evaluarHorner(0.01);
-			Calendar tFin = new GregorianCalendar();
-			System.out.println("T.Ejecucion archivo " + i + ": " + (tFin.getTimeInMillis() - tIni.getTimeInMillis()));
-		}
-	}
+	}	
 }
